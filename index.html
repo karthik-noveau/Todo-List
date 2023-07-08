@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="taskHolder">
+        <div class="taskHolderContainer">
+            <section class="headerContainer">
+                <h1>Task list</h1>
+                <button onclick="addButtonClicked()">Add</button>
+            </section>
+            <section class="sectionContainer">
+                <table class="tableContainer">
+                    <tr>
+                        <th>Name</th>
+                        <th>Tasks</th>
+                        <th>Due date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div>
+    <div class="popupWindowContainer" id="windowBox">
+        <div class="popupWindowContainerBox" id="windowBoxContainer">
+            <span class="material-symbols-outlined" id="closeIcon" onclick="buttonClosed()">
+                close
+            </span>
+            <form>
+                <div class="label">
+                    <label>Name :</label>
+                </div>
+                <input type="text" value="" placeholder="Enter your name" class="name" required id="inputField">
+                <div class="label">
+                    <label>Task :</label>
+                </div>
+                <input type="text" value="" placeholder="Task" required id="inputField" class="task">
+                <div class="label">
+                    <label>Date :</label>
+                </div>
+                <input type="date" value="" placeholder="Select date" required id="inputField" class="date">
+                <div class="label">
+                    <label>Status :</label>
+                </div>
+                <select class="selectContainer status" value="" name="status" aria-placeholder="chooce status">
+                    <option value="completed">completed</option>
+                    <option value="not started">not started</option>
+                    <option value="in-progress">in-progress</option>
+                </select>
+                <button class="selectContainer button" onclick="add(event)">Add</button>
+
+            </form>
+        </div>
+    </div>
+    <div class="popupWindowContainer" id="windowBox">
+        <div class="popupWindowContainerBoxOne" id="windowBoxContainerOne">
+            <span class="material-symbols-outlined" id="closeIcon" onclick="buttonClosedOne()">
+                close
+            </span>
+            <form>
+                <div class="label">
+                    <label>Name :</label>
+                </div>
+                <input type="text" value="" placeholder="Enter your name" class="name1" required id="inputField">
+                <div class="label">
+                    <label>Task :</label>
+                </div>
+                <input type="text" value="" placeholder="Task" required id="inputField" class="task1">
+                <div class="label">
+                    <label>Date :</label>
+                </div>
+                <input type="date" value="" placeholder="Select date" required id="inputField" class="date1">
+                <div class="label">
+                    <label>Status :</label>
+                </div>
+                <select class="selectContainer status1" value="" name="status"  required>
+                    <option value="completed">completed</option>
+                    <option value="not started">not started</option>
+                    <option value="in-progress">in-progress</option>
+                </select>
+                <button class="selectContainer button" onclick="updateData(event)">Update</button>
+
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
